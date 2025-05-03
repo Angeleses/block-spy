@@ -1,62 +1,95 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Due Diligence Reports</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+    header, section {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #4b5563;
+    }
+    input[type="email"] {
+      padding: 0.5rem;
+      width: 250px;
+      margin-right: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #1f2937;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .report-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .report-card h3 {
+      margin-top: 0;
+    }
+    .report-card button {
+      margin-top: 1rem;
+      background: none;
+      color: #1f2937;
+      border: 1px solid #1f2937;
+    }
+  </style>
+</head>
+<body>
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-12">
-      <header className="max-w-4xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          AI-Powered Due Diligence for Crypto Projects
-        </h1>
-        <p className="text-gray-600 text-lg">
-          Clear reports. No hype. Built by an investigator, not an influencer.
-        </p>
-        <div className="mt-6">
-          <Input placeholder="Enter your email" className="max-w-md mx-auto mb-2" />
-          <Button>Subscribe</Button>
-        </div>
-      </header>
+  <header>
+    <h1>AI-Powered Due Diligence for Crypto Projects</h1>
+    <p>Clear reports. No hype. Built by an investigator, not an influencer.</p>
+    <form style="margin-top: 1rem;">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </header>
 
-      <section className="max-w-4xl mx-auto mb-16">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Latest Reports</h2>
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card>
-            <CardContent>
-              <h3 className="text-lg font-bold">Due Diligence: MoonChain</h3>
-              <p className="text-gray-600 mt-2">
-                ⚠️ 4/7 Risk Factors Triggered. Anonymity issues, unclear tokenomics.
-              </p>
-              <Button className="mt-4" variant="outline">
-                View Full Report
-              </Button>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent>
-              <h3 className="text-lg font-bold">Due Diligence: DogeX</h3>
-              <p className="text-gray-600 mt-2">
-                ⚠️ 5/7 Risk Factors Triggered. No team info. Suspicious contract history.
-              </p>
-              <Button className="mt-4" variant="outline">
-                View Full Report
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+  <section>
+    <h2>Latest Reports</h2>
 
-      <section className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">How It Works</h2>
-        <p className="text-gray-600">
-          We use AI tools, open-source data, and structured prompts to evaluate new
-          crypto coins. Every report follows a repeatable framework.
-        </p>
-        <Button className="mt-4" variant="link">
-          Learn the Method
-        </Button>
-      </section>
+    <div class="report-card">
+      <h3>Due Diligence: MoonChain</h3>
+      <p>⚠️ 4/7 Risk Factors Triggered. Anonymity issues, unclear tokenomics.</p>
+      <button>View Full Report</button>
     </div>
-  );
-}
+
+    <div class="report-card">
+      <h3>Due Diligence: DogeX</h3>
+      <p>⚠️ 5/7 Risk Factors Triggered. No team info. Suspicious contract history.</p>
+      <button>View Full Report</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>How It Works</h2>
+    <p>We use AI tools, open-source data, and structured prompts to evaluate new crypto coins. Every report follows a repeatable framework.</p>
+    <button>Learn the Method</button>
+  </section>
+
+</body>
+</html>
